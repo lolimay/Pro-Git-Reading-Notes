@@ -15,3 +15,5 @@ git config user.name # check user.name's value
 git help <verb> == man git-<verb> # show git sub-commands' manual page
 git <verb> -h # show git sub-command available options
 ````
+
+[Home](./README.md) | [Next](./2-Git-Basics.md)

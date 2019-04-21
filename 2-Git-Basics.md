@@ -96,7 +96,14 @@ git log --no-merges # prevent the display of merge commits
 ````
 
 ## Undoing Things
-
+### redo the last commit
+````bash
+git commit --amend # redo the last commit
+````
+### unstaging a staged file
+````bash
+git reset (HEAD <file>) # reset staging area to the HEAD commit
+````
 
 
 ## Reference

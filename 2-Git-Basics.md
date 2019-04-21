@@ -29,7 +29,7 @@ git add -A # add all modified and untracked files to the index
 ````
 \* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
-## Ignoring Files
+### Ignoring Files
 `.gitignore` ignore specific files that git will not try to track them.
 
 > The rules for the patterns you can put in the .gitignore file are as follows:
@@ -54,15 +54,47 @@ git diff --staged # *compare staged changes and the last commit
 ### commit
 `git commit` Record changes to the repository.
 
-````
+````bash
 git commit -m "commit message" # commit with single line commit message
 git commit # call core.editor and input multi-lines commit message
 git commit -v # show the changes when edit the commit message
 git commit -m "Skip git add part" -a # directly git commit
 ````
+**Note:** `git commit -a` can not add `untracked` file automatically. In this situation, you need to use `git add` manually.
+
+### rm
+````bash
+git rm <filename> == git add <filename> # add deleted file to the index
+git rm --cached <filename> # remove the file from the staging area
+````
+
+### mv
+````bash
+git mv file_from file_to
+
+# equivalent to running something like this:
+
+mv README.md README
+git rm README.md
+git add README
+````
+
+## Viewing the Commit History
+## log
+````bash
+git log # lists the commits in reverse chronological order
+git log -p/--patch # show the patch output
+git log -n # limit the number of log entries displayed
+git log --stat # show abbreviated stats for each commit
+git log --pretty=oneline # prints each commit on a single line
+git log --pretty=format:"%H %cn %cd %s" # prints the formatted log
+git log --pretty=format:"%h %cn %s" --graph # display an ASCII graph
+````
+
+
 
 ## Reference
 1. [Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)
 2. [Good .gitignore file examples](https://github.com/github/gitignore)
 
-[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md)
+[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md) | [Next]()

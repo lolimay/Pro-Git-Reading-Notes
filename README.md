@@ -8,3 +8,6 @@ Hi, here is my reading notes for the book *Pro Git*. Please note that this repos
 
 ## Reference
 [*Pro Git* - Scott Chacon and Ben Straub](https://git-scm.com/book/en/v2)
+
+## License
+This project is open source under the Licence [MIT](./LICENSE).

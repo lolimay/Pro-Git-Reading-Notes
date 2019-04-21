@@ -10,10 +10,10 @@ git clone <url> <newname> # clone an existing git repository and rename it.
 
 ## Recording Changes to the Repository
 ![](./images/file-states.png)
-<p>Figure 1. File state in the working directory.</p>
+<p align="center">Figure 1. File state in the working directory.</p>
 
 ![](./images/lifecycle.png)
-<p>Figure 2. The lifecycle of the status of the files.</p>
+<p align="center">Figure 2. The lifecycle of the status of the files.</p>
 
 ### status
 ````bash
@@ -29,7 +29,7 @@ git add -A # add all modified and untracked files to the index
 ````
 \* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
-### Ignoring Files
+### ignoring files
 `.gitignore` ignore specific files that git will not try to track them.
 
 > The rules for the patterns you can put in the .gitignore file are as follows:
@@ -97,15 +97,15 @@ git log --no-merges # prevent the display of merge commits
 ````
 
 ## Undoing Things
-### Redo the last commit
+### redo the last commit
 ````bash
 git commit --amend # redo the last commit
 ````
-### Unstaging a staged file
+### unstaging a staged file
 ````bash
 git reset (HEAD <file>) # reset staging area to the HEAD commit
 ````
-### Unmodifying a Modified File
+### unmodifying a modified file
 ````bash
 git checkout -- <file> # reset working directory from the staging area
 ````
@@ -115,7 +115,7 @@ git checkout -- <file> # reset working directory from the staging area
 ````bash
 git clone <url> # clone an existing git repository from elsewhere.
 ````
-### Showing Your Remotes
+### showing your remotes
 ````bash
 git remote # show all remote repositories
 git remote -v # show all remote repositories with urls
@@ -125,23 +125,23 @@ git pull <remote> # == git fetch + git merge
 git push (<remote> <branch>)
 
 ````
-### Inspecting a Remote
+### inspecting a remote
 ````
 git remote show origin # show information about origin
 ````
-### Renaming and Removing Remotes
+### renaming and removing remotes
 ````bash
 git remote rename <oldname> <newname> # rename remote repository
 git remete remove <remote> # remove remote repository
 ````
 
-### Modify Remotes
+### modify remotes
 ````bash
 git remote set-url <name> <newurl> # set new url for the existing remote
 ````
 
 ## Tagging
-### Listing Your Tags
+### listing your tags
 ````bash
 git tag # lists the tags in alphabetical order
 git tag -l "v1.8.5*" # search for tags that match a particular pattern

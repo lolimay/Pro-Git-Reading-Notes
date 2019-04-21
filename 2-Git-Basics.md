@@ -57,6 +57,8 @@ git diff --staged # *compare staged changes and the last commit
 ````
 git commit -m "commit message" # commit with single line commit message
 git commit # call core.editor and input multi-lines commit message
+git commit -v # show the changes when edit the commit message
+git commit -a -m "Skip git add part" # directly git commit
 ````
 
 ## Reference

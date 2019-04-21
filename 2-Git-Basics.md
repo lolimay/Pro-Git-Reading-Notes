@@ -89,7 +89,13 @@ git log --stat # show abbreviated stats for each commit
 git log --pretty=oneline # prints each commit on a single line
 git log --pretty=format:"%H %cn %cd %s" # prints the formatted log
 git log --pretty=format:"%h %cn %s" --graph # display an ASCII graph
+git log --author='lolimay' # query logs by specifying author
+git log --since='2019-04-21' # query logs by specifying start time
+git log --before='2019-04-22' # query logs by specifying end time
+git log --no-merges # prevent the display of merge commits
 ````
+
+## Undoing Things
 
 
 

@@ -140,6 +140,14 @@ git remete remove <remote> # remove remote repository
 git remote set-url <name> <newurl> # set new url for the existing remote
 ````
 
+## Tagging
+### Listing Your Tags
+````bash
+git tag # lists the tags in alphabetical order
+git tag -l "v1.8.5*" # search for tags that match a particular pattern
+````
+
+
 ## Reference
 1. [Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)
 2. [Good .gitignore file examples](https://github.com/github/gitignore)

@@ -16,4 +16,4 @@ git help <verb> == man git-<verb> # show git sub-commands' manual page
 git <verb> -h # show git sub-command available options
 ````
 
-[Home](./README.md) | [Next](./2-Git-Basics.md)
+[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Next](./2-Git-Basics.md)

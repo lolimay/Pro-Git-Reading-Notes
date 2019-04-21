@@ -10,4 +10,4 @@ git clone <url> <newname> # clone an existing git repository and rename it.
 
 ## Recording Changes to the Repository
 
-[Home](./README.md) | [Previous](./1-Getting-Started.md)
+[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md)

@@ -47,7 +47,8 @@ git add -A # add all modified and untracked files to the index
 `git diff` Show changes between commits, commit and working tree, etc.
 ````bash
 git diff # to see what you've changed but not staged (compare working directory with staging area)
-git diff --staged # *compare staged changes and the last commit
+git diff --staged # *compare staging area and the last commit
+git diff master # compare working directory and the last commit from the master branch
 ````
 \* `git diff --staged` == `git diff --cached`
 
@@ -96,15 +97,48 @@ git log --no-merges # prevent the display of merge commits
 ````
 
 ## Undoing Things
-### redo the last commit
+### Redo the last commit
 ````bash
 git commit --amend # redo the last commit
 ````
-### unstaging a staged file
+### Unstaging a staged file
 ````bash
 git reset (HEAD <file>) # reset staging area to the HEAD commit
 ````
+### Unmodifying a Modified File
+````bash
+git checkout -- <file> # reset working directory from the staging area
+````
 
+## Working with Remotes
+### clone
+````bash
+git clone <url> # clone an existing git repository from elsewhere.
+````
+### Showing Your Remotes
+````bash
+git remote # show all remote repositories
+git remote -v # show all remote repositories with urls
+git remote add <shortname> <url> # add remote repository
+git fetch <remote> # fetch remote repository
+git pull <remote> # == git fetch + git merge
+git push (<remote> <branch>)
+
+````
+### Inspecting a Remote
+````
+git remote show origin # show information about origin
+````
+### Renaming and Removing Remotes
+````bash
+git remote rename <oldname> <newname> # rename remote repository
+git remete remove <remote> # remove remote repository
+````
+
+### Modify Remotes
+````bash
+git remote set-url <name> <newurl> # set new url for the existing remote
+````
 
 ## Reference
 1. [Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)

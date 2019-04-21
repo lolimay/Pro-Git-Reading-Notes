@@ -10,10 +10,10 @@ git clone <url> <newname> # clone an existing git repository and rename it.
 
 ## Recording Changes to the Repository
 ![](./images/file-states.png)
-Figure 1. File state in the working directory.
+<p>Figure 1. File state in the working directory.</p>
 
 ![](./images/lifecycle.png)
-Figure 2. The lifecycle of the status of the files.
+<p>Figure 2. The lifecycle of the status of the files.</p>
 
 ### status
 ````bash

@@ -18,6 +18,7 @@ Figure 2. The lifecycle of the status of the files.
 ### status
 ````bash
 git status # show the working tree status
+git stats --short # show the working tree status in a more compact way
 ````
 ### add
 `git add` add precisely this content to the next commit.
@@ -27,7 +28,28 @@ git add <filename> # *add file contents to the index
 ````
 \* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
+## Ignoring Files
+`.gitignore` ignore specific files that git will not try to track them.
+
+> The rules for the patterns you can put in the .gitignore file are as follows:
+> - Blank lines or lines starting with # are ignored.
+> 
+> - Standard glob patterns work, and will be applied recursively throughout the entire working tree.
+> 
+> - You can start patterns with a forward slash (/) to avoid recursivity.
+> 
+> - You can end patterns with a forward slash (/) to specify a directory.
+> 
+> - You can negate a pattern by starting it with an exclamation point (!).
+
+### diff
+`git diff` Show changes between commits, commit and working tree, etc.
+````bash
+git diff # to see what you've changed but not staged
+````
+
 ## Reference
-[Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)
+1. [Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)
+2. [Good .gitignore file examples](https://github.com/github/gitignore)
 
 [Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md)

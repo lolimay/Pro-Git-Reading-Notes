@@ -25,6 +25,7 @@ git stats --short # show the working tree status in a more compact way
 
 ````bash
 git add <filename> # *add file contents to the index
+git add -A # add all modified and untracked files to the index
 ````
 \* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
@@ -45,7 +46,17 @@ git add <filename> # *add file contents to the index
 ### diff
 `git diff` Show changes between commits, commit and working tree, etc.
 ````bash
-git diff # to see what you've changed but not staged
+git diff # to see what you've changed but not staged (compare working directory with staging area)
+git diff --staged # *compare staged changes and the last commit
+````
+\* `git diff --staged` == `git diff --cached`
+
+### commit
+`git commit` Record changes to the repository.
+
+````
+git commit -m "commit message" # commit with single line commit message
+git commit # call core.editor and input multi-lines commit message
 ````
 
 ## Reference

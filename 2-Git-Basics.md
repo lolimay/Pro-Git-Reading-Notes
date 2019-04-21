@@ -1,6 +1,12 @@
-# Git Basics
+# Chapter2 Git Basics
+<p><a href="#getting-a-git-repository">2.1 Getting a Git Repository</a></p>
+<p><a href="#recording-changes-to-the-repository">2.2 Recording Changes to the Repository</a></p>
+<p><a href="#viewing-the-commit-history">2.3 Viewing the Commit History</a></p>
+<p><a href="#getting-a-git-repository">2.4 Getting a Git Repository</a></p>
+<p><a href="#getting-a-git-repository">2.5 Getting a Git Repository</a></p>
+<p><a href="#getting-a-git-repository">2.6 Getting a Git Repository</a></p>
 
-## Getting a Git Repository
+## Getting a Git Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
 ````bash
 git init # initialize a git repository from a local directory.
 git clone <url> # clone* an existing git repository from elsewhere.
@@ -8,11 +14,11 @@ git clone <url> <newname> # clone an existing git repository and rename it.
 ````
 \* Pulls down all the data for that repository, and checks out a working copy of the latest version.
 
-## Recording Changes to the Repository
-![](./images/file-states.png)
+## 2.2 Recording Changes to the Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
+<p align="center"><img src="./images/file-states.png"></p>
 <p align="center">Figure 1. File state in the working directory.</p>
 
-![](./images/lifecycle.png)
+<p align="center"><img src="./images/lifecycle.png"></p>
 <p align="center">Figure 2. The lifecycle of the status of the files.</p>
 
 ### status
@@ -29,7 +35,7 @@ git add -A # add all modified and untracked files to the index
 ````
 \* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
-### ignoring files
+### ignoring files <kbd>[TOP](#chapter2-git-basics)</kbd>
 `.gitignore` ignore specific files that git will not try to track them.
 
 > The rules for the patterns you can put in the .gitignore file are as follows:
@@ -80,7 +86,7 @@ git rm README.md
 git add README
 ````
 
-## Viewing the Commit History
+## Viewing the Commit History <kbd>[TOP](#chapter2-git-basics)</kbd>
 ## log
 ````bash
 git log # lists the commits in reverse chronological order
@@ -96,7 +102,7 @@ git log --before='2019-04-22' # query logs by specifying end time
 git log --no-merges # prevent the display of merge commits
 ````
 
-## Undoing Things
+## Undoing Things <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### redo the last commit
 ````bash
 git commit --amend # redo the last commit
@@ -110,7 +116,7 @@ git reset (HEAD <file>) # reset staging area to the HEAD commit
 git checkout -- <file> # reset working directory from the staging area
 ````
 
-## Working with Remotes
+## Working with Remotes <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### clone
 ````bash
 git clone <url> # clone an existing git repository from elsewhere.

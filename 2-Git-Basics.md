@@ -1,12 +1,15 @@
 # Chapter2 Git Basics
-<p><a href="#getting-a-git-repository">2.1 Getting a Git Repository</a></p>
-<p><a href="#recording-changes-to-the-repository">2.2 Recording Changes to the Repository</a></p>
-<p><a href="#viewing-the-commit-history">2.3 Viewing the Commit History</a></p>
-<p><a href="#getting-a-git-repository">2.4 Getting a Git Repository</a></p>
-<p><a href="#getting-a-git-repository">2.5 Getting a Git Repository</a></p>
-<p><a href="#getting-a-git-repository">2.6 Getting a Git Repository</a></p>
+<p><a href="#21-getting-a-git-repository-top">2.1 Getting a Git Repository</a></p>
+<p><a href="#22-recording-changes-to-the-repository-top">2.2 Recording Changes to the Repository</a></p>
+<p><a href="#23-viewing-the-commit-history-top">2.3 Viewing the Commit History</a></p>
+<p><a href="#24-undoing-things-top">2.4 Undoing Things</a></p>
+<p><a href="#25-working-with-remotes-top">2.5 Working with Remotes
+</a></p>
+<p><a href="#26-tagging-top">2.6 Tagging</a></p>
+<p><a href="#27-git-aliases-top">2.7 Git Aliases</a></p>
+<p><a href="#28-summary-top">2.8 Summary</a></p>
 
-## Getting a Git Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.1 Getting a Git Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
 ````bash
 git init # initialize a git repository from a local directory.
 git clone <url> # clone* an existing git repository from elsewhere.
@@ -35,7 +38,7 @@ git add -A # add all modified and untracked files to the index
 ````
 \* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
-### ignoring files <kbd>[TOP](#chapter2-git-basics)</kbd>
+### ignoring files
 `.gitignore` ignore specific files that git will not try to track them.
 
 > The rules for the patterns you can put in the .gitignore file are as follows:
@@ -86,7 +89,7 @@ git rm README.md
 git add README
 ````
 
-## Viewing the Commit History <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.3 Viewing the Commit History <kbd>[TOP](#chapter2-git-basics)</kbd>
 ## log
 ````bash
 git log # lists the commits in reverse chronological order
@@ -102,7 +105,7 @@ git log --before='2019-04-22' # query logs by specifying end time
 git log --no-merges # prevent the display of merge commits
 ````
 
-## Undoing Things <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.4 Undoing Things <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### redo the last commit
 ````bash
 git commit --amend # redo the last commit
@@ -116,7 +119,7 @@ git reset (HEAD <file>) # reset staging area to the HEAD commit
 git checkout -- <file> # reset working directory from the staging area
 ````
 
-## Working with Remotes <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.5 Working with Remotes <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### clone
 ````bash
 git clone <url> # clone an existing git repository from elsewhere.
@@ -146,7 +149,7 @@ git remete remove <remote> # remove remote repository
 git remote set-url <name> <newurl> # set new url for the existing remote
 ````
 
-## Tagging
+## 2.6 Tagging <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### listing your tags
 ````bash
 git tag # lists the tags in alphabetical order
@@ -157,5 +160,6 @@ git tag -l "v1.8.5*" # search for tags that match a particular pattern
 ## Reference
 1. [Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)
 2. [Good .gitignore file examples](https://github.com/github/gitignore)
+
 
 [Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md) | [Next]()

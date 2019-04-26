@@ -116,8 +116,10 @@ git reset (HEAD <file>) # reset staging area to the HEAD commit
 ````
 ### unmodifying a modified file
 ````bash
-git checkout -- <file> # reset working directory from the staging area
+git checkout -- <file> # discard changes in working directory
+git checkout . # reset working directory from the staging area
 ````
+**Note:** `git checkout .` must be executed in the root directory of your project.
 
 ## 2.5 Working with Remotes <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### clone

@@ -214,4 +214,4 @@ git config --global alias.visual '!gitk' # alias to run an external command
 2. [Good .gitignore file examples](https://github.com/github/gitignore)
 
 
-[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md) | [Next]()
+[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./1-Getting-Started.md) | [Next](./3-Git-Branching.md)

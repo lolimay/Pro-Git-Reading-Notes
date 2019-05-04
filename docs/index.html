@@ -18,7 +18,24 @@
       loadSidebar: true,
       subMaxLevel: 2,
       name: 'Pro Git Reading Notes',
-      repo: 'https://github.com/lolimay/Pro-Git-Reading-Notes'
+      repo: 'https://github.com/lolimay/Pro-Git-Reading-Notes',
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span style="display:block;">Made with ❤ by <a href="https://github.com/lolimay" target="_blank">@lolimay</a> and Powered by <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span> ',
+            '<span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span></span> ',
+            '<span id="busuanzi_container_site_uv">UV: <span id="busuanzi_value_site_uv"></span></span>',
+            '<br>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ]
     }
   </script>
   <style>
@@ -47,7 +64,7 @@
     }
     .button-outer {
       margin-top: 50px!important;
-      margin-bottom: 20px!important;
+      margin-bottom: 100px!important;
       text-align: right;
     }
 .button {
@@ -88,6 +105,9 @@
       font-size: 14px;
     }
 }
+footer {
+  text-align: center;
+}
   </style>
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
@@ -99,5 +119,6 @@
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-ini.min.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>

@@ -195,7 +195,7 @@ git checkout -b <branchname> <tagname>/<commitid> # create a new branch
 git config --global alias.co checkout # set alias
 git config --global alias.visual '!gitk' # alias to run an external command
 ````
-**Note:** A much more recommneded way that set git alias is to edit [~/.gitconfig](~/.gitconfig) file directly. And below is the template:
+**Note:** A much more recommended way that set git alias is to edit [~/.gitconfig](~/.gitconfig) file directly. And below is the template:
 ````ini
 [user]
 	email = lolimay@lolimay.cn

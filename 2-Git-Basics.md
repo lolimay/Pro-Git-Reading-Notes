@@ -154,10 +154,61 @@ git remote set-url <name> <newurl> # set new url for the existing remote
 ## 2.6 Tagging <kbd>[TOP](#chapter2-git-basics)</kbd>
 ### listing your tags
 ````bash
-git tag # lists the tags in alphabetical order
+git tag # lists all tags in alphabetical order
 git tag -l "v1.8.5*" # search for tags that match a particular pattern
 ````
+### creating tags
+````bash
+git tag -a v1.1 -m "version 1.1" # annotated tag
+git tag v1.1-lw # lightweight tag
+git tag -a v1.2 -m "version 1.2" 9fceb02 # tagging later
+````
 
+### show tag
+````bash
+git show v1.0
+````
+
+### sharing tags
+**Note:** By default, the `git push` command doesn’t transfer tags to remote servers. 
+````bash
+git push origin <tagname> # push specific tag
+git push [<remote>] --tags # push all tags
+````
+
+### deleting tags
+````bash
+git tag -d <tagname> # delete local tag
+# Two ways of deleting remote tags
+git push <remote> :refs/tags/<tagname>
+git push <remote> --delete <tagname>
+````
+
+### checking out tags
+````bash
+git checkout v1.0 # switch to this tag
+git checkout -b <branchname> <tagname>/<commitid> # create a new branch
+````
+
+## 2.7 Git Aliases <kbd>[TOP](#chapter2-git-basics)</kbd>
+````bash
+git config --global alias.co checkout # set alias
+git config --global alias.visual '!gitk' # alias to run an external command
+````
+**Note:** A much more recommneded way that set git alias is to edit [~/.gitconfig](~/.gitconfig) file directly. And below is the template:
+````ini
+[user]
+	email = lolimay@lolimay.cn
+	name = lolimay
+[http]
+	postBuffer = 524288000
+	postBuffer = 524288000
+[core]
+	editor = vim
+[alias]
+	lo = log --graph --abbrev-commit --decorate --format=format:'%C(bold cyan)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	visual = !gitk
+````
 
 ## Reference
 1. [Git: Understanding the Index File](https://mincong-h.github.io/2018/04/28/git-index/)

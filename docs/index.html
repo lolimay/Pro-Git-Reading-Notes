@@ -21,7 +21,7 @@
     }
   </script>
   <style>
-    .sidebar-toggle-button{opacity:.5}@media (max-width:500px){.app-name-link{font-size:18px}h1{font-size:28px!important}h2{font-size:22px!important}h3{font-size:18px!important}.markdown-section{margin:0;padding:10px 20px}}@media (min-width:700px){.sidebar-toggle-button{display:none}body .sidebar{width:320px;left:-270px;padding-left:10px}}pre code{background:#f6f8fa;padding:16px!important;font-size:14px!important}.section-link,.sidebar nav a,.sidebar-nav a{font-size:14px}.markdown-section code:not([class*=lang-]):not([class*=language-]){background:#f3f3f3}.markdown-section blockquote{border-left:.25em solid #dfe2e5;color:#6a737d;padding:0 1em;background:0 0}.markdown-section p.tip,.markdown-section tr:nth-child(2n){background-color:#f8f8f8}.markdown-section p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-section p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;height:20px;width:20px;text-align:center;top:14px}.markdown-section p.tip code{background-color:#efefef}.markdown-section p.tip em{color:#34495e}a:hover{text-decoration:none!important}.sidebar-nav li.active>a{border:none!important}
+    .sidebar-toggle-button{opacity:.2}@media (max-width:500px){.app-name-link{font-size:18px}h1{font-size:28px!important}h2{font-size:22px!important}h3{font-size:18px!important}.markdown-section{margin:0;padding:10px 20px}}@media (min-width:700px){.sidebar-toggle-button{display:none}body .sidebar{width:320px;left:-270px;padding-left:10px}}pre code{background:#f6f8fa;padding:16px!important;font-size:14px!important}.section-link,.sidebar nav a,.sidebar-nav a{font-size:14px}.markdown-section code:not([class*=lang-]):not([class*=language-]){background:#f3f3f3}.markdown-section blockquote{border-left:.25em solid #dfe2e5;color:#6a737d;padding:0 1em;background:0 0}.markdown-section p.tip,.markdown-section tr:nth-child(2n){background-color:#f8f8f8}.markdown-section p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-section p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;height:20px;width:20px;text-align:center;top:14px}.markdown-section p.tip code{background-color:#efefef}.markdown-section p.tip em{color:#34495e}a:hover{text-decoration:none!important}.sidebar-nav li.active>a{border:none!important}
   </style>
   <style>
     .sidebar-nav li.active>a, .sidebar-nav li.collapse>a {
@@ -47,8 +47,8 @@
     .button-outer {
       margin-top: 50px!important;
       margin-bottom: 20px!important;
-  text-align: right;
-}
+      text-align: right;
+    }
 .button {
   font-size: 14px;
   display: inline-block;
@@ -67,6 +67,22 @@
 .markdown-section h2 {
   padding: 0;
   border: none;
+}
+.github-corner svg {
+  width: 40px!important;
+  height: 40px!important;
+  opacity: 0.1;
+}
+.github-corner svg:hover {
+  opacity: 1;
+}
+@media (max-width: 500px) {
+    pre code {
+      font-size: 12px!important;
+    }
+    .markdown-section p, .markdown-section code, .markdown-section .tip {
+      font-size: 14px;
+    }
 }
   </style>
   <script>

@@ -5,3 +5,5 @@
 <p><a href="#34-branching-workflows">3.4 Branching Workflows</a></p>
 <p><a href="#35-remote-branches">3.5 Remote Branches</a></p>
 <p><a href="#36-rebasing">3.6 Rebasing</a></p>
+
+[Home](https://github.com/lolimay/Pro-Git-Reading-Notes) | [Previous](./2-Git-Basics.md) | [Next](./3-Git-Branching.md)

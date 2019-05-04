@@ -1,14 +1,6 @@
 # Chapter2 Git Basics
-<p><a href="#21-getting-a-git-repository-top">2.1 Getting a Git Repository</a></p>
-<p><a href="#22-recording-changes-to-the-repository-top">2.2 Recording Changes to the Repository</a></p>
-<p><a href="#23-viewing-the-commit-history-top">2.3 Viewing the Commit History</a></p>
-<p><a href="#24-undoing-things-top">2.4 Undoing Things</a></p>
-<p><a href="#25-working-with-remotes-top">2.5 Working with Remotes
-</a></p>
-<p><a href="#26-tagging-top">2.6 Tagging</a></p>
-<p><a href="#27-git-aliases-top">2.7 Git Aliases</a></p>
 
-## 2.1 Getting a Git Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.1 Getting a Git Repository 
 ````bash
 git init # initialize a git repository from a local directory.
 git clone <url> # clone* an existing git repository from elsewhere.
@@ -16,7 +8,7 @@ git clone <url> <newname> # clone an existing git repository and rename it.
 ````
 \* Pulls down all the data for that repository, and checks out a working copy of the latest version.
 
-## 2.2 Recording Changes to the Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.2 Recording Changes to the Repository 
 <p align="center"><img src="./images/file-states.png"></p>
 <p align="center">Figure 1. File state in the working directory.</p>
 
@@ -58,7 +50,7 @@ git diff # to see what you've changed but not staged (compare working directory 
 git diff --staged # *compare staging area and the last commit
 git diff master # compare working directory and the last commit from the master branch
 ````
-\* `git diff --staged` == `git diff --cached`
+**Note:** `git diff --staged` == `git diff --cached`
 
 ### commit
 `git commit` Record changes to the repository.
@@ -69,7 +61,7 @@ git commit # call core.editor and input multi-lines commit message
 git commit -v # show the changes when edit the commit message
 git commit -m "Skip git add part" -a # directly git commit
 ````
-**Note:** `git commit -a` can not add `untracked` file automatically. In this situation, you need to use `git add` manually.
+!> `git commit -a` can not add `untracked` file automatically. In this situation, you need to use `git add` manually.
 
 ### rm
 ````bash
@@ -88,8 +80,8 @@ git rm README.md
 git add README
 ````
 
-## 2.3 Viewing the Commit History <kbd>[TOP](#chapter2-git-basics)</kbd>
-## log
+## 2.3 Viewing the Commit History 
+### log
 ````bash
 git log # lists the commits in reverse chronological order
 git log -p/--patch # show the patch output
@@ -104,7 +96,7 @@ git log --before='2019-04-22' # query logs by specifying end time
 git log --no-merges # prevent the display of merge commits
 ````
 
-## 2.4 Undoing Things <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.4 Undoing Things 
 ### redo the last commit
 ````bash
 git commit --amend # redo the last commit
@@ -120,7 +112,7 @@ git checkout . # reset working directory from the staging area
 ````
 **Note:** `git checkout .` must be executed in the root directory of your project.
 
-## 2.5 Working with Remotes <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.5 Working with Remotes 
 ### clone
 ````bash
 git clone <url> # clone an existing git repository from elsewhere.
@@ -150,7 +142,7 @@ git remete remove <remote> # remove remote repository
 git remote set-url <name> <newurl> # set new url for the existing remote
 ````
 
-## 2.6 Tagging <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.6 Tagging 
 ### listing your tags
 ````bash
 git tag # lists all tags in alphabetical order
@@ -189,7 +181,7 @@ git checkout v1.0 # switch to this tag
 git checkout -b <branchname> <tagname>/<commitid> # create a new branch
 ````
 
-## 2.7 Git Aliases <kbd>[TOP](#chapter2-git-basics)</kbd>
+## 2.7 Git Aliases 
 ````bash
 git config --global alias.co checkout # set alias
 git config --global alias.visual '!gitk' # alias to run an external command

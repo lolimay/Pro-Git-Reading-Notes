@@ -18,6 +18,100 @@
       name: 'Pro-Git-Reading-Notes'
     }
   </script>
+  <style>
+      .sidebar-toggle-button {
+        opacity: .5;
+        left: -18px!important;
+      }
+      @media (max-width: 500px) {
+        .app-name-link {
+          font-size: 18px;
+        }
+        h1 {
+          font-size: 28px!important;
+        }
+        h2 {
+          font-size: 22px!important;
+        }
+        h3 {
+          font-size: 18px!important;
+        }
+        .markdown-section {
+          margin: 0;
+          padding: 10px 20px;
+        }
+      }
+      @media (min-width: 700px) {
+        .sidebar-toggle-button {
+          display: none;
+        }
+        body .sidebar {
+          width: 320px;
+          left: -270px;
+          padding-left: 10px;
+        }
+      }
+      pre code {
+        background: #F6F8FA;
+        padding: 16px!important;
+        font-size: 14px!important;
+      }
+      .sidebar-nav a, .sidebar nav a, .section-link {
+        font-size: 14px;
+      }
+      .markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
+        background: #F3F3F3;
+      }
+      .markdown-section blockquote {
+          border-left: .25em solid #dfe2e5;
+          color: #6a737d;
+          padding: 0 1em;
+          background: transparent;
+      }
+      .markdown-section p.tip,.markdown-section tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+
+.markdown-section p.tip {
+    border-bottom-right-radius: 2px;
+    border-left: 4px solid #f66;
+    border-top-right-radius: 2px;
+    margin: 2em 0;
+    padding: 12px 24px 12px 30px;
+    position: relative
+}
+
+.markdown-section p.tip:before {
+    background-color: #f66;
+    border-radius: 100%;
+    color: #fff;
+    content: "!";
+    font-family: Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    left: -12px;
+    line-height: 20px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    top: 14px
+}
+
+.markdown-section p.tip code {
+    background-color: #efefef
+}
+
+.markdown-section p.tip em {
+    color: #34495e
+}
+a:hover {
+  text-decoration: none!important;
+}
+.sidebar-nav li.active>a {
+  border: none!important;
+}
+  </style>
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
       navigator.serviceWorker.register('sw.js')
@@ -27,5 +121,6 @@
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-ini.min.js"></script>
 </body>
 </html>

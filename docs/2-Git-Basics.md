@@ -59,7 +59,7 @@ git diff master # compare working directory and the last commit from the master 
 git commit -m "commit message" # commit with single line commit message
 git commit # call core.editor and input multi-lines commit message
 git commit -v # show the changes when edit the commit message
-git commit -m "Skip git add part" -a # directly git commit
+git commit -ma "Skip git add part" # directly git commit
 ````
 !> `git commit -a` can not add `untracked` file automatically. In this situation, you need to use `git add` manually.
 

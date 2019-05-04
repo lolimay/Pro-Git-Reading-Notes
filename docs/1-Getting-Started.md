@@ -1,4 +1,4 @@
-# Getting Started
+# Chapter1 Getting Started
 
 ## First-Time Git Setup
 ````bash
@@ -16,4 +16,7 @@ git help <verb> == man git-<verb> # show git sub-commands' manual page
 git <verb> -h # show git sub-command available options
 ````
 
-[Home](/) | [Next](./2-Git-Basics.md)
+<p class="button-outer">
+    <a href="#/"><span class="button">Home</span></a>
+    <a href="#/2-Git-Basics"><span class="button">Next</span></a>
+</p>

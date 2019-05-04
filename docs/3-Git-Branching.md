@@ -1,3 +1,7 @@
 # Chapter3 Git Branching
 
-[Home](/) | [Previous](./2-Git-Basics.md) | [Next](./3-Git-Branching.md)
+<p class="button-outer">
+    <a href="#/2-Git-Basics"><span class="button">Previous</span></a>
+    <a href="#/"><span class="button">Home</span></a>
+    <a href="#/3-Git-Branching"><span class="button">Next</span></a>
+</p>

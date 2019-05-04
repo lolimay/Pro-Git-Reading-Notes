@@ -6,7 +6,7 @@ git init # initialize a git repository from a local directory.
 git clone <url> # clone* an existing git repository from elsewhere.
 git clone <url> <newname> # clone an existing git repository and rename it.
 ````
-\* Pulls down all the data for that repository, and checks out a working copy of the latest version.
+**Note:** `git clone` means that pulling down all the data for that repository, and checks out a working copy of the latest version. If we add `--bare` parameter, the cloned result is a folder with the suffix `.git`.
 
 ## 2.2 Recording Changes to the Repository 
 <p align="center"><img src="./images/file-states.png"></p>
@@ -27,7 +27,7 @@ git stats --short # show the working tree status in a more compact way
 git add <filename> # *add file contents to the index
 git add -A # add all modified and untracked files to the index
 ````
-\* The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
+**Note:** The index is a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; `git ls-files` can show you the contents of the index. Please note that words index, stage, and cache are the same thing in Git: they are used interchangeably.
 
 ### ignoring files
 `.gitignore` ignore specific files that git will not try to track them.
@@ -50,7 +50,7 @@ git diff # to see what you've changed but not staged (compare working directory 
 git diff --staged # *compare staging area and the last commit
 git diff master # compare working directory and the last commit from the master branch
 ````
-**Note:** `git diff --staged` == `git diff --cached`
+!> `git diff --staged` == `git diff --cached`
 
 ### commit
 `git commit` Record changes to the repository.
@@ -110,7 +110,7 @@ git reset (HEAD <file>) # reset staging area to the HEAD commit
 git checkout -- <file> # discard changes in working directory
 git checkout . # reset working directory from the staging area
 ````
-**Note:** `git checkout .` must be executed in the root directory of your project.
+!> `git checkout .` must be executed in the root directory of your project.
 
 ## 2.5 Working with Remotes 
 ### clone
@@ -161,11 +161,11 @@ git show v1.0
 ````
 
 ### sharing tags
-**Note:** By default, the `git push` command doesn’t transfer tags to remote servers. 
 ````bash
 git push origin <tagname> # push specific tag
 git push [<remote>] --tags # push all tags
 ````
+!> The `git push` command doesn’t transfer tags to remote servers by default. 
 
 ### deleting tags
 ````bash
@@ -186,7 +186,7 @@ git checkout -b <branchname> <tagname>/<commitid> # create a new branch
 git config --global alias.co checkout # set alias
 git config --global alias.visual '!gitk' # alias to run an external command
 ````
-**Note:** A much more recommended way that set git alias is to edit [~/.gitconfig](~/.gitconfig) file directly. And below is the template:
+A much more recommended way that set git alias is to edit `~/.gitconfig` file directly. And below is the template:
 ````ini
 [user]
 	email = lolimay@lolimay.cn
@@ -206,4 +206,8 @@ git config --global alias.visual '!gitk' # alias to run an external command
 2. [Good .gitignore file examples](https://github.com/github/gitignore)
 
 
-[Home](/) | [Previous](./1-Getting-Started.md) | [Next](./3-Git-Branching.md)
+<p class="button-outer">
+    <a href="#/1-Getting-Started"><span class="button">Previous</span></a>
+    <a href="#/"><span class="button">Home</span></a>
+    <a href="#/3-Git-Branching"><span class="button">Next</span></a>
+</p>

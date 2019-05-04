@@ -7,7 +7,6 @@
 </a></p>
 <p><a href="#26-tagging-top">2.6 Tagging</a></p>
 <p><a href="#27-git-aliases-top">2.7 Git Aliases</a></p>
-<p><a href="#28-summary-top">2.8 Summary</a></p>
 
 ## 2.1 Getting a Git Repository <kbd>[TOP](#chapter2-git-basics)</kbd>
 ````bash
